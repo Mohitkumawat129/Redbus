@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+}
+.busDetail {
+  background-color: red;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Search bar */
+.search_bar form {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202204/redbus_1200x768.png?VersionId=JXyxPyUZzox7t3MdV6IBbiu1NbhivRvE");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  display: flex;
+  justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search_bar form .input_field {
+  width: 90vw;
+  height: 7.5rem;
+  background-color: gray;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 35vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search_bar form input {
+  font-size: 2rem;
+  height: 3rem;
+  width: 15rem;
+  padding: 3px 6px;
+  border: none;
+  outline: none;
+}
+.search_bar form button {
+  background-color: red;
+  color: white;
+  font-size: 2rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.search_bar form button:hover {
+  background-color: white;
+  color: red;
+}
+/* Para above api data */
+.para {
+  height: 5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+}
+.para .para1 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.para p {
+  padding: 0;
+  margin: 0;
+}
+.back_button {
+  width: 100vw;
+  text-align: center;
+}
+.back_button button {
+  margin-top: 50px;
+  font-size: 2rem;
+  padding: 3px 6px;
+  background-color: red;
   color: white;
+  transition: all 0.2s;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.back_button button:hover {
+  border-radius: 15px;
+  background-color: white;
+  color: red;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sorting {
+  width: 100vw;
+  height: 5rem;
+  background-color: gray;
+  color: red;
+  border: 2px solid black;
+  margin-bottom: 3rem;
+}
+.sorting ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  left: 15rem;
+  width: 50vw;
+}
+.sorting ul li button {
+  font-size: 1.5rem;
+  padding: 5px 7.5px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.sorting ul li button:hover {
+  text-decoration: underline;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.form input {
+  font-size: 2rem;
+  padding: 3px 6px;
+}
+.form button {
+  font-size: 2rem;
+  padding: 3px 6px;
+  transition: all 0.2s;
+}
+.form button:hover {
+  background-color: gray;
+  border-radius: 10px;
+}
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: rgb(186, 69, 69);
+}
+.error h1 {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  top: -10rem;
+}
+.error button {
+  font-size: 2rem;
+  padding: 6px 10px;
+  background-color: white;
+  color: red;
+  position: relative;
+  top: -10rem;
+  transition: all 0.2s;
+}
+.error button:hover {
+  background-color: red;
+  color: white;
+  border-radius: 10px;
 }
