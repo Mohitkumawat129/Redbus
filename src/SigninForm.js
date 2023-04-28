@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import redbus from "./image/redbus-logojpg.webp";
+
 const SigninForm = () => {
   const [path, setPath] = useState();
   const [detail1, setDetail1] = useState({
@@ -32,6 +34,8 @@ const SigninForm = () => {
       alert("Email does not match");
     } else if (items.password !== detail1.password) {
       alert("Password does not match");
+    } else if (detail1.email === "" || detail1.password === "") {
+      alert("Please fill data");
     } else {
       setPath("/bus");
     }
@@ -39,9 +43,12 @@ const SigninForm = () => {
   return (
     <>
       <div className="form">
-        <h1>
-          Sign in {detail1.password} {detail1.email}
-        </h1>
+        <div className="logo">
+          <NavLink to="/">
+            <img src={redbus} alt="logo" />
+          </NavLink>
+        </div>
+        <h1>Sign in</h1>
         <form onSubmit={(event) => event.preventDefault()}>
           <input
             type="email"
@@ -49,6 +56,8 @@ const SigninForm = () => {
             value={detail1.email}
             name="email"
             onChange={onChange}
+            autocomplete="off"
+            required
           />
           <br />
           <br />
@@ -58,6 +67,8 @@ const SigninForm = () => {
             value={detail1.password}
             name="password"
             onChange={onChange}
+            autocomplete="off"
+            required
           />
           <br />
           <br />
